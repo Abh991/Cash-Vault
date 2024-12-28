@@ -1,0 +1,72 @@
+/* SplashScreen.css */
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #007bff; /* Optional fallback color */
+  background-size: cover;  /* Ensure background image covers the screen */
+  background-position: center;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.logo-container {
+  animation: logoScale 2.5s ease-out forwards;
+}
+
+.splash-logo {
+  width: 120px;
+  height: auto;
+  opacity: 0;
+  animation: logoFadeIn 2.5s ease-in-out forwards;
+}
+
+.loading-spinner {
+  margin-top: 20px;
+  border: 4px solid rgba(255, 255, 255, 0.3); /* Light spinner border */
+  border-top: 4px solid #ffffff; /* White spinner top */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Spin animation */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes logoScale {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

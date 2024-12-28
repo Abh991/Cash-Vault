@@ -1,0 +1,231 @@
+/* HomePage.css */
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #FFFFFF; /* White */
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  color: #000000; /* Black */
+}
+
+/* Top Bar */
+.top-bar {
+  width: 100%;
+  background-color: #50C878; /* Emerald Green */
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.app-name {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Settings Button */
+.settings-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.settings-button:hover {
+  color: #50C878; /* Emerald Green */
+}
+
+/* Dropdown Menu */
+.settings-menu {
+  position: absolute;
+  top: 60px; /* Position it below the top bar */
+  right: 20px;
+  background-color: #50C878; /* Emerald Green */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.settings-option {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.settings-option:hover {
+  background-color: #2E8B57; /* Darker Emerald Green */
+}
+
+/* User Info Section */
+.user-info {
+  background-color: #F0F0F0; /* Light Gray */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 350px;
+  margin-top: 30px;
+  border-left: 6px solid #50C878; /* Emerald Green */
+}
+
+.user-info h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #50C878; /* Emerald Green */
+}
+
+.user-info p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #000000; /* Black */
+}
+
+.user-info input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  color: #000000; /* Black */
+}
+
+/* Input Field Styling */
+.user-info input:focus {
+  outline: none;
+  border-color: #50C878; /* Emerald Green */
+  background-color: #fff;
+}
+
+/* User Options Section */
+.user-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 113px; /* Increase the gap by 3 cm (approximately 113px) */
+}
+
+.option-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F0F0F0; /* Light Gray */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.option-icon {
+  font-size: 36px;
+  color: #50C878; /* Emerald Green */
+}
+
+.option-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000000; /* Black */
+}
+
+/* Button Color Scheme */
+.primary-button {
+  background-color: #50C878; /* Emerald Green */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #2E8B57; /* Darker Emerald Green */
+  transform: translateY(-2px);
+}
+
+.primary-button:active {
+  background-color: #1C6B38; /* Darkest Emerald Green */
+  transform: translateY(0);
+}
+
+.secondary-button {
+  background-color: white;
+  color: #50C878; /* Emerald Green */
+  border: 2px solid #50C878; /* Emerald Green border */
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: #F0F0F0; /* Light Gray */
+  transform: translateY(-2px);
+}
+
+.secondary-button:active {
+  background-color: #D3D3D3; /* Even lighter Gray */
+  transform: translateY(0);
+}
+
+.disabled-button {
+  background-color: #D3D3D3; /* Light gray */
+  color: #aaa;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: not-allowed;
+}
+
+.disabled-button:hover {
+  background-color: #D3D3D3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-info {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .user-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
